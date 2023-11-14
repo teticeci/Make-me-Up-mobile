@@ -2,9 +2,9 @@
 
 Tugas 7 saya letakkan di repositori bernama "Funky-Groove", tetapi saya membuat repositori ini "Make-me-Up-mobile" untuk menyamakan dengan konsep proyek Django di setengah semester yang lalu.
 
-![Screenshot 2023-11-14 204547]("C:\Users\tetib\OneDrive\Pictures\Screenshots\Screenshot 2023-11-14 204547.png")
-![Screenshot 2023-11-14 204617]("C:\Users\tetib\OneDrive\Pictures\Screenshots\Screenshot 2023-11-14 204617.png")
-![Screenshot 2023-11-14 205709]("C:\Users\tetib\OneDrive\Pictures\Screenshots\Screenshot 2023-11-14 205709.png")
+![Bukti repo](images\Screenshot 2023-11-14 204547.png)
+![Bukti commit](images\Screenshot 2023-11-14 204617.png)
+![Bukti output](images\Screenshot 2023-11-14 205709.png)
 
 # Tugas 7 | Elemen Dasar Flutter
 
@@ -38,3 +38,46 @@ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-b
 Jawab:
 
 Melakukan instalasi Flutter, lalu membuat proyek baru. Melakukan pengeditan kode di main.dart, serta membuat file baru bernama menu.dart yang berisi potongan kode dari main.dart. Membuat widget sederhana yang terdiri dari AppBar, Homapage, Button, Text, dan Styling. Melakukan git add, commit, dan push.
+
+# Tugas 8 | Flutter Navigation, Layouts, Forms, and Input Elements
+
+Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
+
+Jawab:
+
+Navigator.push() berfungsi ketika ingin masuk ke new page tetapi mendukung untuk kembali lagi ke page sebelumnya. Contoh penggunaannya dari Homepage ke ShopFormPage. Navigator.pushReplacement() berfungsi ketika intin masuk ke new page tetapi tidak mendukung untuk kembali lagi ke page sebelumnya. Contoh penggunaannya di login page dan logout page.
+
+Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
+
+Jawab:
+
+- Single-Child Layout Widgets
+<br>Widget ini digunakan untuk layout yang hanya memiliki satu child. Contoh penggunaannya
+<br>Container: Membuat kotak dengan ukuran, warna, border, dan margin tertentu.
+<br>Padding: Memberikan padding di sekitar child widget.
+<br>Center: Menempatkan child widget di tengah.
+- Multi-Child Layout Widgets
+Widget ini digunakan untuk mengatur lebih dari satu child. Contoh penggunaannya
+<br>Row dan Column: Mengatur child widget secara horizontal (Row) atau vertikal (Column).
+<br>GridView: Menampilkan child widget dalam grid dua dimensi.
+<br>ListView: Menampilkan daftar scrollable dari child widget.
+- Sliver Widgets
+Sliver widgets adalah bagian integral dari CustomScrollView, yang memungkinkan efek scroll yang lebih canggih dan custom. Contoh penggunaannya
+<br>SliverList dan SliverGrid: Versi sliver dari ListView dan GridView. Memungkinkan daftar atau grid untuk berinteraksi dengan efek scroll lain dalam CustomScrollView.
+<br>SliverAppBar: AppBar yang bisa berubah ukuran dan tampilannya saat di-scroll. 
+
+Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
+
+Jawab:
+
+FormField dan TextFormField terintegrasi dengan Form widget di Flutter, berperan dalam membantu mengelola state dari setiap field dalam form. TextFormField menyediakan mekanisme validasi otomatis, jika input pengguna tidak memenuhi aturan tersebut maka Flutter akan menampilkan pesan kesalahan secara otomatis.
+
+Bagaimana penerapan clean architecture pada aplikasi Flutter?
+
+Jawab:
+
+Dalam pengembangan aplikasi Flutter, clean architecture melibatkan pemisahan kode ke dalam lapisan yang berbeda dengan tugas yang berbeda, yang membantu menghasilkan kode yang lebih modular, mudah diuji, dan mudah dipelihara.
+
+Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)
+
+Jawab:
