@@ -2,9 +2,9 @@
 
 Tugas 7 saya letakkan di repositori bernama "Funky-Groove", tetapi saya membuat repositori ini "Make-me-Up-mobile" untuk menyamakan dengan konsep proyek Django di setengah semester yang lalu.
 
-![Bukti_repo!](images/Screenshot 2023-11-14 204547.png)
-![Bukti_commit!](images/Screenshot 2023-11-14 204617.png)
-![Bukti_output!](images/Screenshot 2023-11-14 205709.png)
+![Bukti_repo!](images\Screenshot 2023-11-14 204547.png)
+![Bukti_commit!](images\Screenshot 2023-11-14 204617.png)
+![Bukti_output!](images\Screenshot 2023-11-14 205709.png)
 
 # Tugas 7 | Elemen Dasar Flutter
 
