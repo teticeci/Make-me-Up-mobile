@@ -80,3 +80,5 @@ Dalam pengembangan aplikasi Flutter, clean architecture melibatkan pemisahan kod
 Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)
 
 Jawab:
+
+Menambahkan drawer menu untuk navigasi ke halaman homepage dan tambah item. Menambahkan fitur berupa form untuk mengaktifkan route fitur tambah item. Data yang diinput terdiri dari nama item, jumlah, dan deskripsi. Terakhir, menambahkan fitur navigasi pada button widget tambah item di homepage, ketika diklik maka mengarahkan ke form tambah item. Peletakan file dikelompokkan ke dalam dua folder, yaitu folder widgets dan folder screens. Melakukan git add, commit, dan push ke repositori.
