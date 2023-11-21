@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // TODO: Impor drawer yang sudah dibuat sebelumnya
 import 'package:beauty_store/screens/shoplist_form.dart';
+import 'package:beauty_store/screens/list_product.dart';
 
 class ShopItem {
   final String name;
@@ -37,6 +38,10 @@ class ShopCard extends StatelessWidget {
                 builder: (context) => ShopFormPage(),
               ),
             );
+          }
+          else if (item.name == "Lihat Item") {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const ProductPage()));
           }
         },
         child: Container(

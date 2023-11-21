@@ -15,7 +15,8 @@ class _ShopFormPageState extends State<ShopFormPage> {
     int _amount = 0;
     String _description = "";
     @override
-    Widget build(BuildContext context) {  
+    Widget build(BuildContext context) {
+        final request = context.watch<CookieRequest>();  
         return Scaffold(
           appBar: AppBar(
             title: const Center(
