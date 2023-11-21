@@ -82,3 +82,52 @@ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-b
 Jawab:
 
 Menambahkan drawer menu untuk navigasi ke halaman homepage dan tambah item. Menambahkan fitur berupa form untuk mengaktifkan route fitur tambah item. Data yang diinput terdiri dari nama item, jumlah, dan deskripsi. Terakhir, menambahkan fitur navigasi pada button widget tambah item di homepage, ketika diklik maka mengarahkan ke form tambah item. Peletakan file dikelompokkan ke dalam dua folder, yaitu folder widgets dan folder screens. Melakukan git add, commit, dan push ke repositori.
+
+# Tugas 9 | Integrasi Layanan Web Django dengan Aplikasi Flutter
+
+Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+Jawab:
+
+Iya, mengambil data JSON tanpa membuat model data terlebih dahulu dapat dilakukan, langsung mengurai (parse) data JSON dan mengakses informasi yang dibutuhkan tanpa membuat model data terstruktur. Namun, membuat model sebelum melakukan pengambilan data JSON lebih baik dilakukan karena terdapat banyak keuntungan, seperti membantu dalam memastikan konsistensi tipe data dan menyediakan lapisan keamanan tambahan terhadap data yang tidak valid atau berbahaya, memudahkan pemeliharaan dan pembacaan kode, dan memudahkan integrasi dengan sistem lain dan memudahkan dokumentasi API.
+
+Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+
+Jawab:
+
+CookieRequest dalam konteks aplikasi Flutter merujuk pada mekanisme untuk menangani cookie dalam permintaan jaringan. Sebuah CookieRequest dapat membantu memastikan bahwa cookie sesi yang tepat dikirim dengan setiap permintaan HTTP, memungkinkan pengguna tetap masuk ke aplikasi. Berbagi instance yang sama dari CookieRequest di seluruh aplikasi memastikan bahwa semua komponen berinteraksi dengan server menggunakan informasi sesi yang sama, penting untuk konsistensi pengalaman pengguna. Tak hanya itu, hal ini mampu menghindari kebutuhan untuk membuat ulang cookie di berbagai komponen, serta memiliki kontrol terpusat atas cookie dan permintaan yang terkait memungkinkan keamanan yang lebih konsisten.
+
+Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+
+Jawab:
+
+1. Pengambilan data JSON, dilakukan melalui HTTP request ke API yang menyediakan data dalam format JSON.<br>
+2. Parsing JSON, Flutter menyediakan metode json.decode untuk mengonversi string JSON menjadi map Dart yang dapat digunakan dalam aplikasi.<br>
+3. Membuat model, membuat kelas model dengan field yang sesuai dengan struktur data JSON, lalu membuat sebuah konstruktor yang mengambil map dan menginisialisasi objek dengan data dari map tersebut.<br>
+4. Menggunakan data di Flutter Widgets, dapat menggunakan FutureBuilder atau StreamBuilder untuk menampilkan data yang diambil dari internet dan mengelola state loading atau error.<br>
+5. Menampilkan data pada user interface, berupa list, kartu, atau bentuk tampilan lainnya, tergantung pada kebutuhan aplikasi.
+
+Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+
+Jawab:
+
+1. Input data akun di Flutter, melakukan validasi data input sebelum mengirimkan ke server.<br>
+2. Pengiriman data ke Django, Flutter mengirimkan data yang telah divalidasi ke server Django menggunakan permintaan HTTP POST request.<br>
+3. Pemrosesan autentikasi di Django, Django memeriksa kredensial yang dikirimkan terhadap database pengguna, jika kredensial benar maka Django mengirimkan respon kembali ke aplikasi Flutter berupa token autentikasi, informasi pengguna, atau pesan kesalahan jika autentikasi gagal.<br>
+4. Respon ke Flutter dan tampilan menu, Flutter menggunakan token tersebut untuk meminta akses ke area terotentikasi dari aplikasi, memungkinkan navigasi ke fitur selanjutnya.
+
+Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+
+Jawab:
+
+Title pada MaterialApp() ->  menentukan judul untuk aplikasi atau halaman tertentu<br>
+Theme pada MaterialApp() -> menentukan tema global atau lokal untuk bagian dari aplikasi<br>
+Drawer -> panel geser yang biasanya berisi menu navigasi atau konten lainnya menyediakan akses cepat ke berbagai bagian aplikasi<br>
+Card -> menampilkan informasi terkait dalam bentuk blok yang rapi dan terorganisir<br>
+Inkwell -> menambahkan efek visual pada interaksi pengguna
+
+Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
+
+Jawab:
+
+Setup autentikasi pada Django untuk Flutter dengan membuat aplikasi baru bernama authentication pada proyek sebelumnya, serta menambahkan beberapa potongan kode di settings.py. Mengintegrasikan sistem autentikasi pada Flutter dengan package yang telah disesiakan. Mengimplementasikan fitur login dan logout, serta membuat model kustom untuk pengambilan data JSON. Menerapan fetch data dari Django ke Flutter dengan menambahkan dependensi HTTP. Mengintegrasikan form Flutter ke Django dengan membuat fungsi baru create_product_flutter di main/views.py.
