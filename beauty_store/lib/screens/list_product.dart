@@ -12,10 +12,10 @@ class ProductPage extends StatefulWidget {
 }
 
 class _ProductPageState extends State<ProductPage> {
-Future<List<Product>> fetchProduct() async {
+Future<List<Item>> fetchProduct() async {
     // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
     var url = Uri.parse(
-        'http://<URL_APP_KAMU>/json/');
+        'http://10.0.2.2/json/');
     var response = await http.get(
         url,
         headers: {"Content-Type": "application/json"},
@@ -25,10 +25,10 @@ Future<List<Product>> fetchProduct() async {
     var data = jsonDecode(utf8.decode(response.bodyBytes));
 
     // melakukan konversi data json menjadi object Product
-    List<Product> list_product = [];
+    List<Item> list_product = [];
     for (var d in data) {
         if (d != null) {
-            list_product.add(Product.fromJson(d));
+            list_product.add(Item.fromJson(d));
         }
     }
     return list_product;
@@ -51,7 +51,7 @@ Widget build(BuildContext context) {
                     return const Column(
                         children: [
                         Text(
-                            "Tidak ada data item.",
+                            "Tidak ada data produk.",
                             style:
                                 TextStyle(color: Color(0xff59A5D8), fontSize: 20),
                         ),
