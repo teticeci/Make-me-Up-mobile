@@ -26,7 +26,7 @@ Future<List<Item>> fetchProduct() async {
     // melakukan decode response menjadi bentuk json
     var data = jsonDecode(utf8.decode(response.bodyBytes));
 
-    // melakukan konversi data json menjadi object Product
+    // melakukan konversi data json menjadi object Item
     List<Item> list_product = [];
     for (var d in data) {
         if (d != null) {

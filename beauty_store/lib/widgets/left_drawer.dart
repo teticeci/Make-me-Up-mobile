@@ -73,7 +73,7 @@ class LeftDrawer extends StatelessWidget {
           ),
           ListTile(
               leading: const Icon(Icons.shopping_basket),
-              title: const Text('Daftar Item'),
+              title: const Text('Lihat Item'),
               onTap: () {
                   // Route menu ke halaman produk
                   Navigator.push(
